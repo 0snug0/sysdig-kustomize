@@ -1,0 +1,33 @@
+app_checks:
+  ## If enabling elasticsearch auth, uncomment and update the block below
+  # - name: elasticsearch
+  #   check_module: elastic
+  #   pattern:
+  #     port: 9200
+  #     comm: java
+  #   conf:
+  #     url: https://sysdigcloud-elasticsearch:9200
+  #     username: readonly
+  #     password: <change_me>
+  #     ssl_verify: false
+configmap: true
+### Agent tags
+# tags: linux:ubuntu,dept:dev,local:nyc
+
+#### Sysdig Software related config ####
+
+# Sysdig collector address
+# collector: 192.168.1.1
+
+# Collector TCP port
+# collector_port: 6666
+
+# Whether collector accepts ssl
+# ssl: true
+
+# collector certificate validation
+# ssl_verify_certificate: true
+
+#######################################
+new_k8s: true
+k8s_cluster_name: gke-sysdig

@@ -1,0 +1,19 @@
+### WARNING: this file is supported from Sysdig Agent 0.80.0
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  name: sysdig-agent
+  labels:
+    app: sysdig-agent
+spec:
+  template:
+    spec:
+      containers:
+      - name: sysdig-agent
+        # This section is for eBPF support. Please refer to Sysdig Support before
+        # uncommenting, as eBPF is recommended for only a few configurations.
+        env:
+         - name: SYSDIG_BPF_PROBE
+           value: ""
+      nodeSelector:
+        cloud.google.com/gke-os-distribution: cos

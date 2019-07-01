@@ -1,0 +1,9 @@
+commonLabels:
+  app: sysdig-agent2
+resources:
+- sysdig-agent-clusterrole.yaml
+- sysdig-agent-daemonset-v2.yaml
+configMapGenerator:
+- name: sysdig-agent
+  files:
+  - dragent.yaml
