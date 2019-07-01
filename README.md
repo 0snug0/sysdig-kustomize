@@ -15,8 +15,14 @@ And COS
 
 To run:
 ```
+# Only running Ubuntu
 kubectl apply -k base
+
+# To deploy on COS nodes
 kubectl apply -k overlays/gke-cos
+
+# To deploy on Ubuntu nodes
+kubectl apply -k overlays/gke-ubuntu
 ```
 
 More to come :)
